@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "title": "React.js",
+      "quantity": 30,
+      "categoryId": 1,
+      "createAt": "2022-11-17T05:05:21.176Z",
+      "id": 1
+    },
+    {
+      "title": "Next.js",
+      "quantity": 30,
+      "categoryId": 1,
+      "createAt": "2022-08-17T15:29:26.744Z",
+      "id": 2
+    },
+    {
+      "title": "Asp.net",
+      "quantity": 30,
+      "categoryId": 2,
+      "createAt": "2022-08-22T05:42:10.991Z",
+      "id": 3
+    },
+    {
+      "title": "tailwind.css",
+      "quantity": 11,
+      "categoryId": 1,
+      "createAt": "2023-06-27T09:06:14.064Z",
+      "id": 4
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "title": "frontend",
+      "description": "frontend of applications",
+      "createAt": "2022-7-28T16:46:35.8585"
+    },
+    {
+      "id": 2,
+      "title": "backend",
+      "description": "backend of applications",
+      "createAt": "2022-7-28T16:47:35.8585"
+    }    
+  ]
+}
