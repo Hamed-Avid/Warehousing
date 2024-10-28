@@ -1,14 +1,17 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
+import useLocalStorage from "./UseLocalStorage";
 
-export default function UseTheme() {
-  const defaultTheme = localStorage.getItem("theme") || "light";
-  const [theme, setTheme] = useState(defaultTheme);
+export default function useTheme() {
+  const [localTheme, setLocalTheme] = useLocalStorage("theme", "dark");
+  const [theme, setTheme] = useState(localTheme);
 
   useEffect(() => {
     const root = window.document.documentElement;
     root.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
-  }, [theme]);
+    setLocalTheme(theme);
+  }, [theme, setLocalTheme]);
 
-  return [theme, setTheme];
+  const setCustomTheme = useMemo(() => (newTheme) => setTheme(newTheme), []);
+
+  return [theme, setCustomTheme];
 }
