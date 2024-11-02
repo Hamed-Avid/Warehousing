@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
-import useLocalStorage from "../hooks/useLocalStorage";
 import { initialProducts } from "../lib/data";
+import useLocalStorage from "../hooks/useLocalStorage";
 
 const ProductContext = createContext();
 
