@@ -4,32 +4,52 @@
 
 @layer base {
   :root {
-    --color-background: 229 231 235;
-    --color-foreground: 107 114 128;
-    --color-primary: 51 65 85;
-    --color-secondary: 17 24 39;
-    --color-tertiary: 15 23 42;
+    --color-background: 30 41 59;
+    --color-foreground: 17 24 39;
+    --color-primary: 148 163 184;
+    --color-secondary: 100 116 139;
+    --color-tertiary: 255 240 240;
     --color-success: 21 94 117;
-    --color-danger: 112 26 117;
+    --color-danger: 168 35 35;
   }
 
   :root[data-theme="light"] {
     --color-background: 229 231 235;
-    --color-foreground: 107 114 128;
+    --color-foreground: 139 146 161;
     --color-primary: 51 65 85;
-    --color-secondary: 37 42 52;
-    --color-tertiary: 15 23 42;
+    --color-secondary: 153 168 197;
+    --color-tertiary: 91 101 120;
     --color-success: 21 94 117;
-    --color-danger: 112 26 117;
+    --color-danger: 168 35 35;
   }
 
   :root[data-theme="dark"] {
     --color-background: 30 41 59;
     --color-foreground: 17 24 39;
     --color-primary: 148 163 184;
-    --color-secondary: 17 24 39;
+    --color-secondary: 100 116 139;
     --color-tertiary: 255 240 240;
     --color-success: 21 94 117;
-    --color-danger: 112 26 117;
+    --color-danger: 168 35 35;
   }
+}
+
+@layer components {
+  .table__head {
+    @apply whitespace-nowrap p-2 text-left text-sm font-semibold text-gray-900 md:px-6 md:py-4 md:text-base;
+  }
+  .table__item {
+    @apply whitespace-nowrap px-2 py-3 text-sm font-normal text-gray-900 md:px-6 md:py-4;
+  }
+}
+
+/* Hide arrow keys in input[type="number"] */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

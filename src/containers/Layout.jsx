@@ -1,14 +1,12 @@
 import Navbar from "../components/Navbar";
 
-const Layout = ({ children }) => {
+export default function Layout({ children }) {
   return (
-    <div className="transition duration-200 bg-bkg min-h-screen">
+    <div className="min-h-screen bg-bkg transition duration-200">
       <Navbar />
-      <main className="container mx-auto px-4 overflow-hidden md:flex-row flex-col lg:max-w-screen-xl">
+      <main className="container mx-auto flex-col overflow-hidden px-4 md:flex-row lg:max-w-screen-xl">
         {children}
       </main>
     </div>
   );
-};
-
-export default Layout;
+}

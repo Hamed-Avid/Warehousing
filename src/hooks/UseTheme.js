@@ -1,5 +1,5 @@
 import { useEffect, useState, useMemo } from "react";
-import useLocalStorage from "./UseLocalStorage";
+import useLocalStorage from "./useLocalStorage";
 
 export default function useTheme() {
   const [localTheme, setLocalTheme] = useLocalStorage("theme", "dark");
